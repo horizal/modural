@@ -199,5 +199,24 @@ table.pro tr {
     }
 }
 
+table,
+td {
+    border: 1px solid #333;
+    text-align: center;
+    width: 50%;
+}
+tbody {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 50%;
+}
+thead,
+tfoot {
+    background-color: rgb(48, 65, 109);
+    color: #fff;
+    text-align: center;
+    width: 50%;
+}
 
 
