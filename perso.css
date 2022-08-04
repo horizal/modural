@@ -215,8 +215,15 @@ thead,
 tfoot {
     background-color: rgb(48, 65, 109);
     color: #fff;
-    text-align: center;
-    width: 50%;
+    text-align: middle;
+    width: 100%;
+}
+
+label-grand {
+    background-color: rgb(48, 65, 109);
+    color: rgb(146, 31, 31);
+    text-align: middle;
+    width: 100%;
 }
 
 

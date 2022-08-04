@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
     <head>
         <title>Laurent Delhorme</title>
@@ -7,6 +8,7 @@
         <link rel="stylesheet" href="perso.css"/>
     </head>
     <body>
+        
         <div class="contenu">
 
             <div class="centre categorie">
@@ -32,23 +34,25 @@
                 <img src="image010.png"></h2>                
             </div>
 
-                <div class="colonne1 colonne">
-                    <!--<h2>Perso</h2>-->
-                    <div >
-                        <p>Réf du chantier :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="refchantier" name="refchantier" required minlength="4" maxlength="8" size="40"></p>
-                        <p>Socièté :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="societe" name="societe" required minlength="4" maxlength="8" size="40"></p>
-                        <p>Adresse postale :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="adressesociete" name="adressesociete" required minlength="4" maxlength="8" size="40"></p>
-                        <p>code postal et ville :<br><input style="background-color:#b2e0f5; color:#000000;" type="number" id="cpsociete" name="cpsociete" required minlength="5" maxlength="5" size="20"></p>
-                        <p>Contact :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="contactsociete" name="contactsociete" required minlength="4" maxlength="8" size="20"></p>
-                        <p>Téléphone fixe :<br><input style="background-color:#b2e0f5; color:#000000;" type="tel" id="telfixe" name="telfixe" required minlength="10" maxlength="10" size="10"></p>
-                        <p>Téléphone portable :<br><input style="background-color:#b2e0f5; color:#000000;" type="tel" id="telmobile" name="telmobile" required minlength="10" maxlength="10" size="10"></p>
-                        <p>Adresse e-mail :<br><input style="background-color:#b2e0f5; color:#000000;" type="email" id="mailsociete" name="mailsociete" required minlength="4" maxlength="40" size="40"></p>
-                    </div>
-            </div>
+    <div class="colonne1">
+                <!--<h2>Perso</h2>-->
+                <div >
+                    <p>Réf du chantier :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="refchantier" name="refchantier" required minlength="4" maxlength="8" size="40"></p>
+                    <p>Socièté :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="societe" name="societe" required minlength="4" maxlength="8" size="40"></p>
+                    <p>Adresse postale :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="adressesociete" name="adressesociete" required minlength="4" maxlength="8" size="40"></p>
+                    <p>code postal et ville :<br><input style="background-color:#b2e0f5; color:#000000;" type="number" id="cpsociete" name="cpsociete" required minlength="5" maxlength="5" size="20"></p>
+                    <p>Contact :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="contactsociete" name="contactsociete" required minlength="4" maxlength="8" size="20"></p>
+                    <p>Téléphone fixe :<br><input style="background-color:#b2e0f5; color:#000000;" type="tel" id="telfixe" name="telfixe" required minlength="10" maxlength="10" size="10"></p>
+                    <p>Téléphone portable :<br><input style="background-color:#b2e0f5; color:#000000;" type="tel" id="telmobile" name="telmobile" required minlength="10" maxlength="10" size="10"></p>
+                    <p>Adresse e-mail :<br><input style="background-color:#b2e0f5; color:#000000;" type="email" id="mailsociete" name="mailsociete" required minlength="4" maxlength="40" size="40"></p>
+    </div>
+        
+            <div>
+                <div class="h1">
                 <table>
                     <thead>
                         <tr>
-                            <th colspan="3">Les modules</th>
+                            <th colspan="4">Les modules</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,28 +60,30 @@
                             <td>Réf</td>
                             <td></td>
                             <td>Qte</td>
+                            <td>Remarque</td>
                         </tr>
                         <tr>
                             <td>ECH-MODU-1468</td>
                             <td><img src="image045.png"></h2> </td>
-                            <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEECH" name="QTEECH" required minlength="1" maxlength="4" size="10"></td>
+                            <td><input class="h1" style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEECH" name="QTEECH" required minlength="1" maxlength="4" size="10" onblur="recalculateSum1();recalculateSum2()" ></td>
+                            <td><img src="image044.png"></h2> </td>
                         </tr>
                         <tr>
                             <td>HO330</td>
-                            <td><img src="image048.png"></h2> </td>
-                            <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO330" name="QTEHO330" required minlength="1" maxlength="4" size="10"></td>
+                            <td><img src="image048.png"></h2</td>
+                            <td><label for="CALQTEECH">
+                            <input id="CALQTEECH" name="CALQTEECH" type="text"></label></td>
                         </tr>
                         <tr>
                             <td>R333</td>
                             <td><img src="image052.png"></h2> </td>
-                            <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTER333" name="QTER333" required minlength="1" maxlength="4" size="10"></td>
+                            <td><label for="CALQTEECH2">
+                            <input id="CALQTEECH2" name="CALQTEECH2" type="text"></label></td>
                         </tr>
                     </tbody>
-                </table>  
-                <table>
                     <thead>
                         <tr>
-                            <th colspan="3">Les raccords</th>
+                            <th colspan="4">Les raccords</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,33 +91,91 @@
                             <td>Réf</td>
                             <td></td>
                             <td>Qte</td>
+                            <td>Remarque</td>
                         </tr>
                         <tr>
                             <td>HO334</td>
-                            <td><img src="image048.png"></h2> </td>
+                            <td><img src="image0641.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO334" name="QTEHO334" required minlength="1" maxlength="4" size="10"></td>
+                            <td><img src="image0681.png"></h2> </td>
                         </tr>
                         <tr>
                             <td>HO333</td>
-                            <td><img src="image048.png"></h2> </td>
+                            <td><img src="image0642.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO333" name="QTEHO333" required minlength="1" maxlength="4" size="10"></td>
+                            <td><img src="image0682.png"></h2> </td>
                         </tr>
                         <tr>
                             <td>HO335</td>
-                            <td><img src="image048.png"></h2> </td>
+                            <td><img src="image0643.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO335" name="QTEHO335" required minlength="1" maxlength="4" size="10"></td>
+                            <td><img src="image0683.png"></h2> </td>
                         </tr>
                         <tr>
                             <td>HO337Z</td>
-                            <td><img src="image048.png"></h2> </td>
+                            <td><img src="image0644.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO337Z" name="QTEHO337Z" required minlength="1" maxlength="4" size="10"></td>
+                            <td><img src="image0684.png"></h2> </td>
                         </tr>
                     </tbody>
-                </table>               
+                    <thead>
+                        <tr>
+                            <th colspan="4">Les embouts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Réf</td>
+                            <td></td>
+                            <td>Qte</td>
+                            <td>Remarque</td>
+                        </tr>
+                        <tr>
+                            <td>HO332</td>
+                            <td><img src="image076.png"></h2> </td>
+                            <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO332" name="QTEHO332" required minlength="1" maxlength="4" size="10"></td>
+                            <td><img src="image081.png"></h2> </td>
+                        </tr>
+                        <thead>
+                            <tr>
+                                <th colspan="4">Les options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Réf</td>
+                                <td></td>
+                                <td>Qte</td>
+                                <td>Remarque</td>
+                            </tr>
+                            <tr>
+                                <td>HO328-5</td>
+                                <td><img src="image083.png"></h2> </td>
+                                <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO328-5" name="QTEHO328-5" required minlength="1" maxlength="4" size="10"></td>
+                                <td><img src="image085.png"></h2> </td>
+                            </tr>
+                            <tr>
+                                <td>HO328-2</td>
+                                <td><img src="image091.png"></h2> </td>
+                                <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO328-2" name="QTEHO328-2" required minlength="1" maxlength="4" size="10"></td>
+                                <td><img src="image097.png"></h2> </td>
+                            </tr>
+                            <tr>
+                                <td>HO250-80</td>
+                                <td><img src="image101.png"></h2> </td>
+                                <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO250-80" name="QTEHO250-80" required minlength="1" maxlength="4" size="10"></td>
+                                <td><img src="image103.png"></h2> </td>
+                            </tr>
+                        </tbody>    
+                    </tbody>
+                </table> 
+                </div>
+ 
             </div>
 
         </div>
-               
+
+                      
     </div>
             <!DOCTYPE html>
                 <!--<div class="centre">
@@ -121,4 +185,29 @@
             </div>
         </div>
     </body>     
-</html>        
+</html>   
+
+
+
+
+<script>
+    function recalculateSum1()
+    {
+        var num1 = parseInt(document.getElementById("QTEECH").value);
+        document.getElementById("CALQTEECH").value = num1 *4;
+
+    }
+
+</script>
+<script>
+function recalculateSum2()
+{
+    var num2 = parseInt(document.getElementById("QTEECH").value);
+    num3=(num2/6500)
+    num3=Math.ceil(num3)
+    if(num2<6500){resul=1} else {resul=num3;}
+    document.getElementById("CALQTEECH2").value = resul;
+}
+</script>
+
+    
