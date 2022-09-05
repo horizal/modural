@@ -14,7 +14,9 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="#home" class="w3-bar-item w3-button"><b>Horizal</b> FERIA / Modural</a>
+      <!--<a href="#home" class="w3-bar-item w3-button"><b>Horizal</b> FERIA / Modural</a>-->
+      <a href="#home" class="w3-bar-item w3-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>
+ 
       <div class="w3-right w3-hide-small">
         <a href="index.html" class="w3-bar-item w3-button">Réalisations</a>
         <a href="devis.html" class="w3-bar-item w3-button">Demande de devis</a>
@@ -25,8 +27,8 @@
   </div>
          <div class="contenu">
             <div >
-                <h2><img src="images/logo_Horizal.png"></h2><br>
-                <h1 >Afin de nous permettre de vous envoyer rapidement votre devis, merci de compléter les cases en bleu.</h1> <br>
+                <!--<h2><img src="images/logo_Horizal.png"></h2><br>--> 
+                <h1 >Afin de nous permettre de vous envoyer rapidement votre devis, merci de compléter les cases en <a class="h1" style="background-color:#b2e0f5; color:#000000;"size="10">bleu</a> .</h1> <br>
             </div>
         <div>
 
@@ -50,22 +52,22 @@
                             <td>Remarque</td>
                         </tr>
                         <tr>
-                            <td>ECH-MODU-1468</td>
+                            <td>ECH-MODU-1468<br><i>Le module échelle (lg 1468 mm)</i></td>
                             <td><img src="images/image045.png"></h2> </td>
-                            <td><input class="h1" style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEECH" name="QTEECH" value="0" required minlength="1" maxlength="4" size="10" onblur="recalculateSum1();recalculateSum2()" ></td>
+                            <td><input class="h1" style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEECH" name="QTEECH" value="0" required minlength="1" maxlength="4" size="10" text-align=center onblur="recalculateSum1();recalculateSum2()" ></td>
                             <td><img src="images/image044.png"></h2> </td>
                         </tr>
                         <tr>
-                            <td>HO330</td>
+                            <td>HO330<br><i>La cale de fixation</i></td>
                             <td><img src="images/image048.png"></h2</td>
                             <td><label for="CALQTEECH">
-                            <input id="CALQTEECH" name="CALQTEECH" value="0" type="text"></label></td>
+                            <input id="CALQTEECH" name="CALQTEECH" value="0" type="text" size="10"></label></td>
                         </tr>
                         <tr>
-                            <td>R333</td>
+                            <td>R333<br><i>La main courante</i></td>
                             <td><img src="images/image052.png"></h2> </td>
                             <td><label for="CALQTEECH2">
-                            <input id="CALQTEECH2" name="CALQTEECH2" value="0" type="text"></label></td>
+                            <input id="CALQTEECH2" name="CALQTEECH2" value="0" type="text" size="10"></label></td>
                         </tr>
                     <thead>
                         <tr>
@@ -79,25 +81,25 @@
                             <td>Remarque</td>
                         </tr>
                         <tr>
-                            <td>HO334</td>
+                            <td>HO334<br><i>Le raccord à 90°</i></td>
                             <td><img src="images/image0641.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO334" value="0" name="QTEHO334" minlength="1" maxlength="4" size="10"></td>
                             <td><img src="images/image0681.png"></h2> </td>
                         </tr>
                         <tr>
-                            <td>HO333</td>
+                            <td>HO333<br><i>Le raccord droit</i></td>
                             <td><img src="images/image0642.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO333" value="0" name="QTEHO333" minlength="1" maxlength="4" size="10"></td>
                             <td><img src="images/image0682.png"></h2> </td>
                         </tr>
                         <tr>
-                            <td>HO335</td>
+                            <td>HO335<br><i>Le raccord droit</i></td>
                             <td><img src="images/image0643.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO335" value="0" name="QTEHO335" minlength="1" maxlength="4" size="10"></td>
                             <td><img src="images/image0683.png"></h2> </td>
                         </tr>
                         <tr>
-                            <td>HO337Z</td>
+                            <td>HO337Z<br><i>Le raccord articulé</i></td>
                             <td><img src="images/image0644.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO337Z" value="0" name="QTEHO337Z" minlength="1" maxlength="4" size="10"></td>
                             <td><img src="images/image0684.png"></h2> </td>
@@ -114,7 +116,7 @@
                                 <td>Remarque</td>
                             </tr>
                         <tr>
-                            <td>HO332</td>
+                            <td>HO332<br><i>L'embout de finition d'extémité</i></td>
                             <td><img src="images/image076.png"></h2> </td>
                             <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO332" value="0" name="QTEHO332" minlength="1" maxlength="4" size="10"></td>
                             <td><img src="images/image081.png"></h2> </td>
@@ -131,19 +133,19 @@
                                 <td>Remarque</td>
                             </tr>
                             <tr>
-                                <td>HO328-5</td>
+                                <td>HO328-5<br><i>La cale "fourchette" ep 5mm</i></td>
                                 <td><img src="images/image083.png"></h2> </td>
-                                <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO328-5" value="0" name="QTEHO328-5" minlength="1" maxlength="4" size="10"></td>
+                                <td><input style="background-color:#b2e0f5; color:#000000;" type="text"  id="QTEHO328-5" value="0" name="QTEHO328-5" minlength="1" maxlength="4" size="10"></td>
                                 <td><img src="images/image085.png"></h2> </td>
                             </tr>
                             <tr>
-                                <td>HO328-2</td>
+                                <td>HO328-2<br><i>La cale "fourchette" ep 2mm</i></td>
                                 <td><img src="images/image091.png"></h2> </td>
                                 <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO328-2" value="0" name="QTEHO328-2" minlength="1" maxlength="4" size="10"></td>
                                 <td><img src="images/image097.png"></h2> </td>
                             </tr>
                             <tr>
-                                <td>HO250-80</td>
+                                <td>HO250-80<br><i>La cale biaise</i></td>
                                 <td><img src="images/image101.png"></h2> </td>
                                 <td><input style="background-color:#b2e0f5; color:#000000;" type="text" id="QTEHO250-80" value="0" name="QTEHO250-80" minlength="1" maxlength="4" size="10"></td>
                                 <td><img src="images/image103.png"></h2> </td>
@@ -156,7 +158,7 @@
                 <!--<textarea name="message" cols="60" rows="5"></textarea>-->
 
                 <p>Adresse postale :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="adressesociete" name="adressesociete" required minlength="4" maxlength="30" size="40"></p>
-                <p>Code postal :<br><input style="background-color:#b2e0f5; color:#000000;" type="number" id="cpsociete" name="cpsociete" required minlength="5" maxlength="5" size="20"></p>
+                <p>Code postal :<br><input style="background-color:#b2e0f5; color:#000000;" type="number" id="cpsociete" name="cpsociete" required minlength="5" maxlength="5" size="10"></p>
                 <p>Ville :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="ville" name="ville" required minlength="2" maxlength="30" size="40"></p>
                 <p>Contact :<br><input style="background-color:#b2e0f5; color:#000000;" type="text" id="contactsociete" name="contactsociete" required minlength="1" maxlength="40" size="40"></p>
                 <!--<p>Téléphone fixe :<br><input style="background-color:#b2e0f5; color:#000000;" type="tel" id="telfixe" name="telfixe" required minlength="10" maxlength="10" size="10"></p>-->
