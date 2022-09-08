@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feria Modural</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="devis.css"/> -->
+<link rel="stylesheet" href="persoLD.css">
+</head>
+<body>    
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <!--<a href="#home" class="w3-bar-item w3-button"><b>Horizal</b> FERIA / Modural</a>-->
+      <a href="#home" class="w3-bar-item w3-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>
+  
+      <div class="w3-right w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button">Réalisations</a>
+        <a href="prédevis.html" class="w3-bar-item w3-button">Demande de devis</a>
+        <!-- <a href="backoffice.html" class="w3-bar-item w3-button">Backoffice</a>-->
+      </div>
+    </div>
+</div>
+  
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+</header>
+
+<div class="w3-display-container w3-content w3-wide" id="demande de devis">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Feria Modural</h3>
+    <img class="w3-image" src="avant garde MODURAL.png" alt="Architecture" width="1500" height="800">
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+    <!-- Section commentaire -->
+    <div class="w3-container w3-padding-32" id="demande de devis">
+        <div style="float: right; margin-top: 30px;" class="col-12">
+        <button onclick="window.location.href = 'devis.html';"><img src="images/bouton suivant.png"></button>
+        </div>
+    </div>
+<!-- End page content -->
+</div>
+
+
+ 
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="persoLD.css" target="_blank" class="w3-hover-text-green">persoLD.css</a></p>
+</footer>
+
+</body>     
+</html>  
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xpznqzzj",
+    title: "Puis-je vous aider?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "votre email"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "Quelle est votre question ?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+
+<script>
+    /* calcul quantité de cale */ 
+    function recalculateSum1()
+    {
+        var num1 = parseInt(document.getElementById("QTEECH").value);
+        document.getElementById("CALQTEECH").value = num1 *4;
+    }
+
+</script>
+
+<script>
+    /* calcul quantité de main courante */ 
+function recalculateSum2()
+{
+    var num2 = parseInt(document.getElementById("QTEECH").value);
+    num2=num2*(1468+5)
+    num3=(num2/6500)
+    num3=Math.ceil(num3)
+    if(num2<6500){resul=1} else {resul=num3;}
+    document.getElementById("CALQTEECH2").value = resul;
+}
+</script>
+
+
+
