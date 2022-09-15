@@ -11,17 +11,22 @@
 
 <!-- Navbar (sit on top) -->
 <div class="hzl-top">
-    <div class="hzl-bar hzl-white hzl-wide hzl-padding hzl-card">
-      <!--<a href="#home" class="hzl-bar-item hzl-button"><b>Horizal</b> FERIA / Modural</a>-->
-      <a href="#home" class="hzl-bar-item hzl-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>
-  
-      <!--<div class="hzl-right hzl-hide-small">-->
+  <div class="hzl-bar hzl-white hzl-wide hzl-padding hzl-card">
+    <!--<a href="#home" class="hzl-bar-item hzl-button"><b>Horizal</b> FERIA / Modural</a>-->
+    <!--<a href="#home" class="hzl-bar-item hzl-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>-->
+    <a href="https://www.horizal.com" class="hzl-bar-item hzl-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>
+    
+
       <div class="hzl-right">  
-        <a href="index.html" class="hzl-bar-item hzl-button">Réalisations</a>
-        <a href="prédevis.html" class="hzl-bar-item hzl-button">Demande de devis</a>
-        <!-- <a href="backoffice.html" class="hzl-bar-item hzl-button">Backoffice</a>-->
+      <a href="téléchargement.html" class="hzl-bar-item hzl-button">Téléchargement</a>
+      <a href="prédevis.html" class="hzl-bar-item hzl-button">Demande de devis</a>
       </div>
-    </div>
+
+      <div class="hzl-left">  
+      <a href="index.html" class="hzl-bar-item hzl-button">Accueil</a>
+      </div>
+
+  </div>
 </div>
   
 <!-- Header -->
@@ -89,28 +94,7 @@
   });
 </script>
 
-<script>
-    /* calcul quantité de cale */ 
-    function recalculateSum1()
-    {
-        var num1 = parseInt(document.getElementById("QTEECH").value);
-        document.getElementById("CALQTEECH").value = num1 *4;
-    }
 
-</script>
-
-<script>
-    /* calcul quantité de main courante */ 
-function recalculateSum2()
-{
-    var num2 = parseInt(document.getElementById("QTEECH").value);
-    num2=num2*(1468+5)
-    num3=(num2/6500)
-    num3=Math.ceil(num3)
-    if(num2<6500){resul=1} else {resul=num3;}
-    document.getElementById("CALQTEECH2").value = resul;
-}
-</script>
 
 
 
