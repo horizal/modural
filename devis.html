@@ -241,8 +241,8 @@
     /* calcul quantité de cale */ 
     function recalculateSum1()
     {
-        var num1 = parseInt(document.getElementById("ECH-MODU-1468").value);
-        document.getElementById("HO330").value = num1 *4;
+        var num1 = parseInt(document.getElementById("95970").value);
+        document.getElementById("95971").value = num1 *4;
     }
 
 </script>
@@ -251,12 +251,12 @@
     /* calcul quantité de main courante */ 
 function recalculateSum2()
 {
-    var num2 = parseInt(document.getElementById("ECH-MODU-1468").value);
+    var num2 = parseInt(document.getElementById("95970").value);
     num2=num2*(1468+5)
     num3=(num2/6500)
     num3=Math.ceil(num3)
     if(num2<6500){resul=1} else {resul=num3;}
-    document.getElementById("R333").value = resul;
+    document.getElementById("95972").value = resul;
 }
 </script>
 
