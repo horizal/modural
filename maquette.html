@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title>HORIZAL - Modural Concept</title>
-  <style>
-    body {
-      margin: 0;
-    }
-    canvas{
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="stylesheet" href="devis.css"/> -->
-  <link rel="stylesheet" href="hzl.css">
-</head>
-
-<body>
-
-  <!-- Navbar (sit on top) -->
-  <div class="hzl-top">
-    <div class="hzl-bar hzl-white hzl-wide hzl-padding hzl-card">
-      <!--<a href="#home" class="hzl-bar-item hzl-button"><b>Horizal</b> FERIA / Modural</a>-->
-      <!--<a href="#home" class="hzl-bar-item hzl-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>-->
-      <a href="https://www.horizal.com" class="hzl-bar-item hzl-button" target="_blank"><img class="left"
-          src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;"></a>
-      <a class="hzl-bar-item hzl-hide-small">FERIA / Modural</a>
-
-      <div class="hzl-right">
-        <!--<a href="téléchargement.html" class="hzl-bar-item hzl-button"><span>Téléchargement</span></a>-->
-        <a href="téléchargement.html" class="hzl-bar-item hzl-button"><span
-            class="hzl-padding hzl-black hzl-opacity-min"><span>Téléchargement</span></a>
-
-        <!--<a href="prédevis.html" class="hzl-bar-item hzl-button"><span>Demande de devis</span></a>-->
-        <a href="prédevis.html" class="hzl-bar-item hzl-button"><span
-            class="hzl-padding hzl-black hzl-opacity-min"><span>Demande de devis</span></a>
-
-        <!--<a href="maquette.html" class="hzl-bar-item hzl-button"><span>Maquette numérique</span></a>-->
-        <a href="maquette.html" class="hzl-bar-item hzl-button"><span
-            class="hzl-padding hzl-black hzl-opacity-min"><span>Maquette numérique</span></a>
-
-      </div>
-
-      <div class="hzl-left">
-        <!--<a href="index.html" class="hzl-bar-item hzl-button">Accueil</a>-->
-        <a href="index.html" class="hzl-left hzl-right-small"><img src="images/home.png" alt="img"
-            style="width:15%" /></a>
-      </div>
-
-    </div>
-
-
-    <script src="js/three.js"></script>
+  <head>
+    <meta charset=UTF-8 />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <script src="js/three.min.js"></script>
+    <script src="js/GLTFLoader.js"></script>
     <script src="js/OrbitControls.js"></script>
-    <script src="js/script.js"></script>
+    <script>
+      let scene, camera, renderer;
 
-</body>
+      function init() {
 
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xdddddd);
+
+        camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+        camera.rotation.y = 45/180*Math.PI;
+        camera.position.x = 800;
+        camera.position.y = 100;
+        camera.position.z = 1000;
+
+        controls = new THREE.OrbitControls(camera);
+        controls.addEventListener('change', renderer);
+
+        hlight = new THREE.AmbientLight (0x404040,100);
+        scene.add(hlight);
+
+        directionalLight = new THREE.DirectionalLight(0xffffff,100);
+        directionalLight.position.set(0,1,0);
+        directionalLight.castShadow = true;
+        scene.add(directionalLight);
+        light = new THREE.PointLight(0xc4c4c4,10);
+        light.position.set(0,300,500);
+        scene.add(light);
+        light2 = new THREE.PointLight(0xc4c4c4,10);
+        light2.position.set(500,100,0);
+        scene.add(light2);
+        light3 = new THREE.PointLight(0xc4c4c4,10);
+        light3.position.set(0,100,-500);
+        scene.add(light3);
+        light4 = new THREE.PointLight(0xc4c4c4,10);
+        light4.position.set(-500,300,500);
+        scene.add(light4);
+
+        renderer = new THREE.WebGLRenderer({antialias:true});
+        renderer.setSize(window.innerWidth,window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        let loader = new THREE.GLTFLoader();
+        loader.load('maquette\free_1972_datsun_240k_gt\scene.gltf', function(gltf){
+          car = gltf.scene.children[0];
+          car.scale.set(0.5,0.5,0.5);
+          scene.add(gltf.scene);
+          animate();
+        });
+      }
+      function animate() {
+        renderer.render(scene,camera);
+        requestAnimationFrame(animate);
+      }
+      init();
+    </script>
+  </body>
 </html>
