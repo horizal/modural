@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="devis.css" />
   <link rel="stylesheet" href="hzl.css">s
 
+
+
 </head>
 
 <body>
@@ -39,63 +41,43 @@
     </div>
   </div>
 
-  <div class="contenu">
-    <div class="hzl-container hzl-padding-32" id="Réalisations">
-      <h3 class="hzl-border-bottom hzl-border-light-grey hzl-padding-16">Téléchargements</h3>
-    </div>
+
+    
 
 
-    <div class="hzl-row-padding">
 
-
-      <div class="hzl-col l3 m6 hzl-margin-bottom">
-        <div class="hzl-display-container">
-          <div
-            href="https://cloud.horizal.com:5203/d/s/qLAVtzOu4hU9MWL59ky47SwPLn1Vskaa/TuL24lA90YRM03F-0dpLmc9u-QhCbtAb-lbgAbnVI1Qk"
-            class="hzl-bar-item hzl-button"><span class="hzl-padding hzl-black hzl-opacity-min" style="border-radius:4px">Documentation</div><br><br></span>
-          <a href="https://cloud.horizal.com:5203/d/s/qLAVtzOu4hU9MWL59ky47SwPLn1Vskaa/TuL24lA90YRM03F-0dpLmc9u-QhCbtAb-lbgAbnVI1Qk"
-            target="_blank"><img src="docs/Vignette documentation commerciale.png" alt="img" style="width:100%" /></a>
-          <!--<img src="images/20201008_144111.jpg" alt="img" style="width:100%">-->
-        </div>
-      </div>
-
-      <div class="hzl-col l3 m6 hzl-margin-bottom ">
-        <div class="hzl-display-container">
-          <div class="hzl-display-topleft hzl-grey hzl-padding"
-            href="https://cloud.horizal.com:5203/d/s/qLATrHuukWeQBDesnTWLfzDjaVb3g7fb/jdi1pqV74U9pYWx9pjxVyrQc9Te1tvPw-ibEAmgRH1Qk"
-            class="hzl-bar-item hzl-button"><span class="hzl-padding hzl-black hzl-opacity-min" style="border-radius:4px">Demande de prix</div><br><br></span>
-          <a href="https://cloud.horizal.com:5203/d/s/qLATrHuukWeQBDesnTWLfzDjaVb3g7fb/jdi1pqV74U9pYWx9pjxVyrQc9Te1tvPw-ibEAmgRH1Qk"
-            target="_blank"><img src="docs/vignette ddp.png" alt="img" style="width:100%" /></a>
-          <!--<img src="images/Cestas (33).jpg" alt="img" style="width:100%">-->
-        </div>
-      </div>
-
-      <div class="hzl-col l3 m6 hzl-margin-bottom">
-        <div class="hzl-display-container">
-          <div class="hzl-display-topleft hzl-grey hzl-padding"
-            href="https://cloud.horizal.com:5203/d/s/qLAMWx4qz2k7U6ia22iWiqlQ1n89WBbF/KG6yAVMF0EvBYV0KSYb6RmbsuRQJGdby-R78AU8xG1Qk"
-            class="hzl-bar-item hzl-button"><span class="hzl-padding hzl-black hzl-opacity-min" style="border-radius:4px">Notice de pose</div><br><br> </span>
-          <a href="https://cloud.horizal.com:5203/d/s/qLAMWx4qz2k7U6ia22iWiqlQ1n89WBbF/KG6yAVMF0EvBYV0KSYb6RmbsuRQJGdby-R78AU8xG1Qk"
-            target="_blank"><img src="docs/Vignette notice de pose.png" alt="img" style="width:100%" /></a>
-          <!--<img src="images/Clichy (92).jpg" alt="img" style="width:100%">-->
-        </div>
-      </div>
+        <script src="js/three.js"></script>
+        <script>
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    
+          const renderer = new THREE.WebGLRenderer();
+          renderer.setSize( window.innerWidth, window.innerHeight );
+          document.body.appendChild( renderer.domElement );
+    
+          const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+          const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+          const cube = new THREE.Mesh( geometry, material );
+          scene.add( cube );
+    
+          camera.position.z = 5;
+    
+          function animate() {
+            requestAnimationFrame( animate );
+    
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+    
+            renderer.render( scene, camera );
+          };
+    
+          animate();
+        </script>
+ 
 
 
 
 
-    </div>
-
-
-  </div>
-
-
-
-  <!-- Page content -->
-  <div class="hzl-content hzl-padding" style="max-width:1564px">
-
-    <!-- End page content -->
-  </div>
 
 
   <!-- Footer -->
