@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>HORIZAL - Modural Concept</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="devis.css" />
+    <link rel="stylesheet" href="hzl.css">s
+</head>
+
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="hzl-top">
+        <div class="hzl-bar hzl-white hzl-wide hzl-padding hzl-card">
+            <!--<a href="#home" class="hzl-bar-item hzl-button"><b>Horizal</b> FERIA / Modural</a>-->
+            <!--<a href="#home" class="hzl-bar-item hzl-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>-->
+            <a href="https://www.horizal.com" class="hzl-bar-item hzl-button" target="_blank"><img class="left"
+                    src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;"></a>
+            <a class="hzl-bar-item hzl-hide-small">FERIA / Modural</a>
+            <div class="hzl-right">
+                <a href="téléchargement.html" class="hzl-bar-item hzl-button"><span>Téléchargement</span></a>
+                <a href="prédevis.html" class="hzl-bar-item hzl-button"><span>Demande de devis</span></a>
+            </div>
+            <div class="hzl-left">
+                <!--<a href="index.html" class="hzl-bar-item hzl-button">Accueil</a>-->
+                <a href="index.html" class="hzl-left hzl-right-small"><img src="images/home.png" alt="img"
+                        style="width:15%" /></a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="contenu">
+        <div>
+            <h1><img src="images/logo MODURAL CONCEPT détouré 200.png"></h1><br>
+            <h1>Bienvenue sur l'outil en ligne MODURAL CONCEPT<BR></h1> <br>
+            <!-- version modifié le 04/01/2023, ajout de l'indication lieux d'habitations-->
+            <h5><i><b>Les consultations sont réservées aux professionnels pour une mise en œuvre dans des lieux
+                        d’habitations résidentielles et logements collectifs (de catégorie A).</b></i><BR></h5> <br>
+            <!-- version avant le 04/01/2023 -->
+            <!--<h2><i><b>Les consultations sont réservées aux professionnels.</b></i><BR></h2> <br>-->
+            <a>Nous vous invitons à compléter les cases en <a class="h1"
+                    style="background-color:#b2e0f5; color:#000000;" size="10">bleu</a></a> <br>
+        </div>
+        <div>
+            <form action="https://formspree.io/f/xpznqzzj" method="POST">
+        </div>
+        <div>
+            <table style="border-radius:4px">
+                <thead>
+                    <tr>
+                        <th colspan="4" style="border-radius:4px">Le Ral</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Merci de renseigner la teinte Ral<br><!--<i>(Préciser la finition : Mat ou Brillant)</i>--></td>
+                    <td><input class="h1"
+                            style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="Ral" name="Ral" value="" required minlength="1" maxlength="20" size="28"
+                            text-align=center onblur="recalculateSum1();recalculateSum2()"><br>
+
+                        <!--Cases radio pour choix finition Mat ou Brillant-->
+                        <div>
+                            <input type="radio" name="Finition" value="Brillant" checked>Brillant&emsp;
+                            <input type="radio" name="Finition" value="Mat">Mat
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <div>
+            <table style="border-radius:4px">
+                <thead>
+                    <tr>
+                        <th colspan="4" style="border-radius:4px">Les modules</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Réf</td>
+                    <td></td>
+                    <td>Qte</td>
+                    <td>Remarque</td>
+                </tr>
+                <tr>
+                    <td>95970<br>Module longueur = 1468 mm<br><br><i>Barreaudage R334 (50x8mm)</i></td>
+
+                    <td><img src="images/95970 Echelle 1468mm.png"></h2>
+                    </td>
+                    <td><input class="h1"
+                            style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="95970" name="95970" value="0" required minlength="1" maxlength="4" size="10"
+                            text-align=center onblur="recalculateSum1();recalculateSum2()"></td>
+                    <td><img src="images/image044.png"></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>95971<br>Cale support 80x80x8 mm (noire)</td>
+                    <td><img src="images/Plat inférieur.png"></h2< /td>
+                    <td><label for="HO330">
+                            <input id="95971" name="95971" value="0" type="text" size="10"
+                                style="border-radius:4px; text-align:center;" disabled></label></td>
+                </tr>
+                <tr>
+                    <td>95972<br>Capot main courante - longueur = 6500 mm</td>
+                    <td><img src="images/MC R333 3D.png"></h2>
+                    </td>
+                    <td><label for="R333">
+                            <input id="95972" name="95972" value="0" type="text" size="10"
+                                style="border-radius:4px; text-align:center;" disabled></label></td>
+                </tr>
+                <thead>
+                    <tr>
+                        <th colspan="4" style="border-radius:4px">Les raccords</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Réf</td>
+                    <td></td>
+                    <td>Qte</td>
+                    <td>Remarque</td>
+                </tr>
+                <tr>
+                    <td>95974<br>Kit Raccord bout à bout<br><br><i>(1 raccord lisse haute + 1 raccord lisse basse)</i>
+                    </td>
+                    <td><img src="images/95974 Bout à bout.png"></h2>
+                    </td>
+                    <td><input style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="95974" value="0" name="95974" minlength="1" maxlength="4" size="10"></td>
+                    <td><img src="images/image0682.png"></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>95975<br>Kit raccord angle 90°<br><br><i>(1 raccord angle 90° lisse haute + 2 embouts lisse
+                            basse)</i></td>
+                    <td><img src="images/95975 Raccord 90°.png"></h2>
+                    </td>
+                    <td><input style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="95975" value="0" name="95975" minlength="1" maxlength="4" size="10"></td>
+                    <td><img src="images/image0682.png"></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>95976<br>Kit raccord angle 80° à 179°<br><br><i>(1 raccord angle 155° à 179° lisse haute + 1
+                            raccord angle 80° à 154° lisse haute + 2 embouts lisse basse)</i></td>
+                    <td><img src="images/95976 Raccords articulés.png"></h2>
+                    </td>
+                    <td><input style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="95976" value="0" name="95976" minlength="1" maxlength="4" size="10"></td>
+                    <td><img src="images/image0682.png"></h2>
+                    </td>
+                </tr>
+
+                <thead>
+                    <tr>
+                        <th colspan="4" style="border-radius:4px">Les embouts</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Réf</td>
+                    <td></td>
+                    <td>Qte</td>
+                    <td>Remarque</td>
+                </tr>
+                <tr>
+                    <td>95973<br>Kit embouts d'extrémité<br><br><i>(1 embout lisse haute + 1 embout lisse basse)</i>
+                    </td>
+                    <td><img src="images/95973 Embout d'extrémité.png"></h2>
+                    </td>
+                    <td><input style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="95973" value="0" name="95973" minlength="1" maxlength="4" size="10"></td>
+                    <td><img src="images/image081.png"></h2>
+                    </td>
+                </tr>
+                <thead>
+                    <tr>
+                        <th colspan="4">Les options</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Réf</td>
+                    <td></td>
+                    <td>Qte</td>
+                    <td>Remarque</td>
+                </tr>
+                <tr>
+                    <td>95978<br>Cale fourchette ép. 5mm (noire)</td>
+                    <td><img src="images/95978 Cale fourchette ep 5mm.png"></h2>
+                    </td>
+                    <td><input style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="95978" value="0" name="95978" minlength="1" maxlength="4" size="10"></td>
+                    <td><img src="images/image085.png"></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>95979<br>Cale fourchette ép. 2mm (noire)</td>
+                    <td><img src="images/95979 Cale fourchette ep 2mm.png"></h2>
+                    </td>
+                    <td><input style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="95979" value="0" name="95979" minlength="1" maxlength="4" size="10"></td>
+                    <td><img src="images/image097.png"></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>95977<br>Cale sécable (noire)</td>
+                    <td><img src="images/95977 Cale sécable.png"></h2>
+                    </td>
+                    <td><input style="border-radius:4px; background-color:#b2e0f5; color:#000000; text-align:center;"
+                            type="text" id="95977" value="0" name="95977" minlength="1" maxlength="4" size="10"></td>
+                    <td><img src="images/image103.png"></h2>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <p>Réf du chantier :<br><input style="border-radius:4px; background-color:#b2e0f5; color:#000000;" type="text"
+                id="refchantier" name="refchantier" required minlength="1" maxlength="40" size="40"></p>
+        <p>Socièté :<br><input style="border-radius:4px; background-color:#b2e0f5; color:#000000;" type="text"
+                id="societe" name="societe" required minlength="1" maxlength="40" size="40"></p>
+
+        <!--<textarea name="message" cols="60" rows="5"></textarea>-->
+
+        <p>Adresse postale :<br><input style="border-radius:4px; background-color:#b2e0f5; color:#000000;" type="text"
+                id="adressesociete" name="adressesociete" required minlength="4" maxlength="30" size="40"></p>
+        <p>Code postal :<br><input style="border-radius:4px; background-color:#b2e0f5; color:#000000;" type="number"
+                id="cpsociete" name="cpsociete" required minlength="5" maxlength="5" size="10"></p>
+        <p>Ville :<br><input style="border-radius:4px; background-color:#b2e0f5; color:#000000;" type="text" id="ville"
+                name="ville" required minlength="2" maxlength="30" size="40"></p>
+        <p>Contact :<br><input style="border-radius:4px; background-color:#b2e0f5; color:#000000;" type="text"
+                id="contactsociete" name="contactsociete" required minlength="1" maxlength="40" size="40"></p>
+        <!--<p>Téléphone fixe :<br><input style="background-color:#b2e0f5; color:#000000;" type="tel" id="telfixe" name="telfixe" required minlength="10" maxlength="10" size="10"></p>-->
+        <p>Téléphone :<br><input style="border-radius:4px; background-color:#b2e0f5; color:#000000;" type="tel" id="tel"
+                name="tel" required minlength="10" maxlength="10" size="10"></p>
+        <p>Adresse e-mail :<br><input style="border-radius:4px; background-color:#b2e0f5; color:#000000;" type="email"
+                id="mailsociete" name="mailsociete" required minlength="4" maxlength="40" size="40"></p>
+
+        <hr>
+        <button style="border-radius:4px; border-width: 1px; border-color: grey;" type="submit">Envoyer la demande de
+            devis</button><br>
+        <a><i>Une offre de prix vous sera transmise dans les meilleurs délais. </i></a>
+
+        </form>
+
+</body>
+</div>
+
+</html>
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+    /* paste this line in verbatim */
+    window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
+    /* customize formbutton below*/
+    formbutton("create", {
+        action: "https://formspree.io/f/xpznqzzj",
+        title: "Puis-je vous aider?",
+        fields: [
+            {
+                type: "email",
+                label: "Email:",
+                name: "email",
+                required: true,
+                placeholder: "votre email"
+            },
+            {
+                type: "textarea",
+                label: "Message:",
+                name: "message",
+                placeholder: "Quelle est votre question ?",
+            },
+            { type: "submit" }
+        ],
+        styles: {
+            title: {
+                backgroundColor: "gray"
+            },
+            button: {
+                backgroundColor: "gray"
+            }
+        }
+    });
+</script>
+
+<script>
+    /* calcul quantité de cale */
+    function recalculateSum1() {
+        var num1 = parseInt(document.getElementById("95970").value);
+        document.getElementById("95971").value = num1 * 3;
+    }
+
+</script>
+
+<script>
+    /* calcul quantité de main courante */
+    function recalculateSum2() {
+        var num2 = parseInt(document.getElementById("95970").value);
+        num2 = num2 * (1468 + 5)
+        num3 = (num2 / 6500)
+        num3 = Math.ceil(num3)
+        if (num2 < 6500) { resul = 1 } else { resul = num3; }
+        document.getElementById("95972").value = resul;
+    }
+</script>

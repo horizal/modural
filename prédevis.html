@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HORIZAL - Modural Concept</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="devis.css"/> -->
+  <link rel="stylesheet" href="hzl.css">
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="hzl-top">
+    <div class="hzl-bar hzl-white hzl-wide hzl-padding hzl-card">
+      <!--<a href="#home" class="hzl-bar-item hzl-button"><b>Horizal</b> FERIA / Modural</a>-->
+      <!--<a href="#home" class="hzl-bar-item hzl-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>-->
+      <a href="https://www.horizal.com" class="hzl-bar-item hzl-button" target="_blank"><img class="left"
+          src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;"></a>
+      <a class="hzl-bar-item hzl-hide-small">FERIA / Modural</a>
+
+      <div class="hzl-right">
+        <!--<a href="téléchargement.html" class="hzl-bar-item hzl-button"><span>Téléchargement</span></a>-->
+        <a href="téléchargement.html" class="hzl-bar-item hzl-button"><span class="hzl-padding hzl-black hzl-opacity-min"><span>Téléchargement</span></a>
+        
+        <!--<a href="prédevis.html" class="hzl-bar-item hzl-button"><span>Demande de devis</span></a>-->
+        <a href="prédevis.html" class="hzl-bar-item hzl-button"><span class="hzl-padding hzl-black hzl-opacity-min"><span>Demande de devis</span></a>
+      </div>
+
+      <div class="hzl-left">
+        <!--<a href="index.html" class="hzl-bar-item hzl-button">Accueil</a>-->
+        <a href="index.html" class="hzl-left hzl-right-small"><img src="images/home.png" alt="img"
+            style="width:15%" /></a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Header -->
+  <header class="hzl-display-container hzl-content hzl-wide" style="max-width:1500px;" id="home">
+
+    <br>
+    <br>
+    <br>
+    <div class="hzl-display-container hzl-content hzl-wide" id="demande de devis">
+      <h3 class="hzl-border-bottom hzl-border-light-grey hzl-padding-16">Feria Modural</h3>
+      <img class="hzl-image" src="images/COMMENT COMMANDER.png" alt="Prédevis" width="1500" height="800">
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <div class="hzl-content hzl-padding" style="max-width:1564px">
+    <!-- Section commentaire -->
+    <div class="hzl-container hzl-padding-32" id="demande de devis">
+      <div style="float: right; margin-top: 30px;" class="col-12">
+        <a window.formbutton=window.formbutton onclick="window.location.href = 'devis.html';"><img class="hzl-image"
+            src="images/bouton suivant.png"></a>
+
+      </div>
+    </div>
+    <!-- End page content -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="hzl-center hzl-black hzl-padding-16">
+    <!--<p>Powered by <a href="https://www.horizal.com" title="hzl.css" target="_blank" class="hzl-hover-text-green">horizal.com</a></p>-->
+    <p><a title="hzl.css"> HORIZAL - 174 Route de Lyon - CS 23014 - Domarin - 38307 Bourgoin Jallieu Cedex - Tél. : 04 74 93 25 35 </a></p>
+    <p>
+      <a href="donnees-personnelles.html" title="hzl.css" class="hzl-hover-text-blue">Données personnelles</a>
+      <a> | </a>
+      <a href="mentions-legales.html" title="hzl.css" class="hzl-hover-text-blue">Mentions légales</a>
+      <a> | </a>
+      <a href="cookies.html" title="hzl.css" class="hzl-hover-text-blue">Cookies</a>
+    </p>
+  </footer>
+  <!-- fin du Footer -->
+
+</body>
+
+</html>
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
+  /* customize formbutton below*/
+  formbutton("create", {
+    action: "https://formspree.io/f/xpznqzzj",
+    title: "Puis-je vous aider?",
+    fields: [
+      {
+        type: "email",
+        label: "Email:",
+        name: "email",
+        required: true,
+        placeholder: "votre email"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "Quelle est votre question ?",
+      },
+      { type: "submit" }
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
