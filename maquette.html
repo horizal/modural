@@ -1,118 +1,72 @@
-<html>
-  <head>
-    <script src="http://www.unilim.fr/pages_perso/guillaume.gilet/Enseignement/Cours/js/three.min.js"></script>
-    <script src="http://www.unilim.fr/pages_perso/guillaume.gilet/Enseignement/Cours/js/FirstPersonControls.js"></script>
-     <script src="http://www.unilim.fr/pages_perso/guillaume.gilet/Enseignement/Cours/js/OrbitControls.js"></script>
-     <script src="js/OBJLoaders.js"></script>
-      <style type="text/css">
-      body {
-        margin: 0px;
-        padding: 0px;
-      }
- 
-      #container {
-        position:absolute;
-        left:0px;
-        top:0px;
-        width:100%;
-        height:100%;
-        margin: 0px;
-        padding: 0px;
-      }
-    </style>
-  </head>
- 
-  <body>
-      
-        
-      
-    <script>
-   
-  ///////////////////   RENDU  /////////////////////////////////
- 
-    var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(document.body.clientWidth, document.body.clientHeight);
-    document.body.appendChild(renderer.domElement);
-        
-    //////////      Couleur de fond      
-    renderer.setClearColorHex(0xAAAAAA, 1.0);
-    renderer.clear();
-         
-    ///////////// CAMERA /////////////////////////////////////////////  
-        
-    var width = renderer.domElement.width;
-    var height = renderer.domElement.height;   
-    var camera = new THREE.PerspectiveCamera(45, width/height, 0.1, 10000);
-        camera.position.x =0;
-        camera.position.y =0;
-        camera.position.z =50;
-        camera.lookAt(new THREE.Vector3(0,0,0));
-    var controls = new THREE.OrbitControls( camera , renderer.domElement );    
- 
-    ///////// SCENE /////////////////////////////////
- 
-    var scene = new THREE.Scene();
-        
-     
-    ////////////////////// OBJET ///////////////////////////////
-       
- ////////////////LOADER
- 
- 
- ///////Cube en OBJ
-   /*var loader = new THREE.OBJLoader();
- 
-    loader.load('cube.obj',
-      function ( geometry ) {
-        var material = new THREE.MeshBasicMaterial( {color: 0xAA0000 });
-        var cube = new THREE.Mesh( geometry, material );
-        cube.scale.set(50,50,50);
-        scene.add( cube );
-      }
-    );*/
- 
- 
- 
-/////// Lapin en JS
-       var loader = new THREE.JSONLoader();
- 
-    loader.load('gc.obj',
-      function ( geometry ) {
-        var material = new THREE.MeshBasicMaterial( {color: 0xAA0000 });
-        var gc = new THREE.Mesh( geometry, material );
-        lapin.scale.set(50,50,50);
-        scene.add( gc );
-      }
-    );
- 
-    //////////////////////  LUMIERE /////////////////////////////
- 
-     //////////// définition lumière   //////////////////  
-    var light = new THREE.PointLight();
-    light.position.set( 100, 0, 0 );
-    scene.add(light);
-        
-    //////////////////////////////////////////////////  
- 
-    /////////////////   ANIMATION    //////////////////
- 
-     function animate(t) {
- 
-    camera.lookAt(new THREE.Vector3(0,0,0));
-    renderer.render(scene, camera);
-    controls.update();   
-    window.requestAnimationFrame(animate, renderer.domElement);
- 
-    };
- 
-    var axisHelper = new THREE.AxisHelper(150);
-     scene.add( axisHelper );
-    renderer.render(scene, camera);
-    animate(1);
- 
-        
-    </script>    
-     
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <title>Modural</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="devis.css" />
+  <link rel="stylesheet" href="hzl.css">s
+
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="hzl-top">
+    <div class="hzl-bar hzl-white hzl-wide hzl-padding hzl-card">
+      <!--<a href="#home" class="hzl-bar-item hzl-button"><b>Horizal</b> FERIA / Modural</a>-->
+      <!--<a href="#home" class="hzl-bar-item hzl-button"><img class="left" src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;">  FERIA / Modural</a>-->
+      <a href="https://www.horizal.com" class="hzl-bar-item hzl-button" target="_blank"><img class="left"
+          src="images/logo_Horizal.png" height="25" style="float:left;margin:0px 0px;"></a>
+      <a class="hzl-bar-item hzl-hide-small">FERIA / Modural</a>
+
+      <div class="hzl-right">
+        <a href="téléchargement.html" class="hzl-bar-item hzl-button">Téléchargement</a>
+        <a href="prédevis.html" class="hzl-bar-item hzl-button">Demande de devis</a>
+      </div>
+
+      <div class="hzl-left">
+        <!--<a href="index.html" class="hzl-bar-item hzl-button">Accueil</a>-->
+        <a href="index.html" class="hzl-left hzl-right-small"><img src="images/home.png" alt="img"
+            style="width:15%" /></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contenu">
+    <div class="hzl-container hzl-padding-32" id="Réalisations">
+      <h3 class="hzl-border-bottom hzl-border-light-grey hzl-padding-16">Maquette numérique</h3>
+    </div>
+
+    <div class="sketchfab-embed-wrapper"> <iframe title="D23-0056-008_A002" frameborder="0" allowfullscreen
+        mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="850"
+        height="600" src="https://sketchfab.com/models/6d850c23a3bb484c8045b5c4d9cfdc73/embed?autostart=1"> </iframe>
+  
+    </div>
+
+
+  </div>
+  </div>
+
+
+
+  <!-- Page content -->
+  <div class="hzl-content hzl-padding" style="max-width:1564px">
+
+    <!-- End page content -->
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="hzl-center hzl-black hzl-padding-16">
+    <p>Powered by <a href="https://www.horizal.com" title="hzl.css" target="_blank"
+        class="hzl-hover-text-green">horizal.com</a></p>
+  </footer>
+
 </body>
- 
+
 </html>
