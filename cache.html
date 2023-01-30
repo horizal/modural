@@ -3,7 +3,7 @@
 <html lang="fr">
 
 <head>
-  <title>HORIZAL - Modural Concept</title>
+  <title>HORIZAL - Modural Concept - Maquette numérique</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="devis.css" />
@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 
   <!-- Navbar (sit on top) -->
   <div class="hzl-top">
@@ -36,33 +37,54 @@
     </div>
   </div>
 
-
-
-  <!-- Page content -->
   <div class="contenu">
     <div class="hzl-container hzl-padding-32" id="Réalisations">
-      <h1 class="hzl-border-bottom hzl-border-light-grey hzl-padding-16">Mentions légales</h1>
+      <h3 class="hzl-border-bottom hzl-border-light-grey hzl-padding-16">Maquette numérique Horizal</h3>
     </div>
-    <div class="mce-content-body">
-      <p><strong>Raison sociale :</strong><br> HORIZAL S.A.S</p>
-      <p><strong>Adresse postale du siège social :</strong><br> S.A.S HORIZAL<br> 174 Route de Lyon<br> CS
-        23014<br>Domarin<br> 38307 Bourgoin-Jallieu Cedex<br> (FRANCE)</p>
-      <p><strong>N° téléphone :</strong> +33 (0)4 74 93 25 35</p>
-      <p><strong>N° registre du commerce :</strong> r.c Bourgoin-Jallieu 693 620 320</p>
-      <p><strong>Capital social :</strong> 312 500 euros</p>
-      <p><strong>Directeur de la Publication :</strong> M. Jean-Luc GENIN</p>
-      <p><strong>Hébergeur :</strong><br> <a href="http://www.w3line.fr/" target="_blank"
-          rel="noopener noreferrer">W3line</a><br> 10 ter, Rue Pasteur<br> 26500 BOURG LES VALENCE<br> Téléphone : +33(0)475 828 101<br> N° registre du commerce : Romans B 404 944 811</p>
+
+    <!--<div class="hzl-content hzl-padding" id="stl_cont" style="width:750px;height:750px;margin:0 auto;"></div>-->
+
+    <div id="stl_cont" style="width:750px;height:500px;margin:0 auto;"></div>
+    <script src="stl_viewer.min.js"></script>
+    <script>
+      var stl_viewer = new StlViewer
+      
+      
+        (
+          document.getElementById("stl_cont"),
+          {
+            auto_rotate: false,
+            auto_resize: true,
+            bgcolor: "#20FAAC",
+            allow_drag_and_drop: true,
+
+            models:
+              [
+                { filename: "D23-0056-008_A002.stl", display: "smooth" }
+              ]
+          }
+        );
+    </script>
+
+    <div class="hzl-row-padding">
+
     </div>
   </div>
 
-  <!-- End page content -->
+
+
+  <!-- Page content -->
+  <div class="hzl-content hzl-padding" style="max-width:1564px">
+
+    <!-- End page content -->
+  </div>
 
 
   <!-- Footer -->
   <footer class="hzl-center hzl-black hzl-padding-16">
     <!--<p>Powered by <a href="https://www.horizal.com" title="hzl.css" target="_blank" class="hzl-hover-text-green">horizal.com</a></p>-->
-    <p><a title="hzl.css"> HORIZAL - 174 Route de Lyon - CS 23014 - Domarin - 38307 Bourgoin Jallieu Cedex - Tél. : 04 74 93 25 35 </a></p>
+    <p><a title="hzl.css"> HORIZAL - 174 Route de Lyon - CS 23014 - Domarin - 38307 Bourgoin Jallieu Cedex - Tél. : 04
+        74 93 25 35 </a></p>
     <p>
       <a href="donnees-personnelles.html" title="hzl.css" class="hzl-hover-text-blue">Données personnelles</a>
       <a> | </a>
